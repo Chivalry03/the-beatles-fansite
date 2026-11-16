@@ -1,0 +1,240 @@
+/* 1. 頂部導覽列排版 */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* 讓 Logo 在左邊、導覽選單在右邊，兩端對齊 */
+  align-items: center;            /* 讓上下垂直置中 */
+  padding: 1.25rem 5%;            /* 內距：上下 1.25 單位，左右 5% */
+  background-color: rgba(18, 18, 18, 0.9); /* 半透明的黑膠灰背景 */
+  border-bottom: 1px solid #2a2a2a;        /* 底部畫一條細微的深灰色分隔線 */
+  position: sticky;               /* 黏性定位：讓導覽列黏在畫面最上方，捲動時不會跑掉 */
+  top: 0;
+  z-index: 100;                   /* 層級設高一點，確保它永遠浮在最上層 */
+}
+
+.logo {
+  font-weight: 800;               /* 字體加粗 */
+  letter-spacing: 0.15em;         /* 字元間距拉開，更有設計感 */
+  font-size: 1.2rem;
+}
+
+.navbar nav a {
+  color: #a3a3a3;                 /* 預設為沉穩的灰色 */
+  text-decoration: none;          /* 拿掉超連結預設的底線 */
+  margin-left: 2rem;              /* 每個連結之間保持左側距離 */
+  font-size: 0.95rem;
+  transition: color 0.2s ease;    /* 滑鼠移過去時顏色變化的過場動畫時間 */
+}
+
+.navbar nav a:hover {
+  color: #ffffff;                 /* 滑鼠移上去時變成純白色 */
+}
+
+/* 2. 主視覺首屏排版 */
+.hero {
+  min-height: 80vh;               /* 至少佔據螢幕高度的 80% */
+  display: flex;
+  align-items: center;            /* 讓裡面的文字區塊垂直置中 */
+  padding: 0 5%;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.hero-content {
+  max-width: 650px;               /* 限制文字最大寬度，避免行太長不好閱讀 */
+}
+
+.subtitle {
+  color: #d4af37;                 /* 經典復古金黃色 */
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;               /* 行高縮小，大標題才不會散開 */
+  margin: 1rem 0 1.25rem;
+}
+
+.hero p {
+  color: #b3b3b3;                 /* 內文用柔和的灰白色，降低視覺疲勞 */
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background-color: #f5f5f0;      /* 暖米白按鈕背景 */
+  color: #121212;                 /* 深色文字 */
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;             /* 輕微圓角 */
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background-color: #ffffff;      /* 滑鼠移上去時按鈕變全白 */
+}
+
+/* 4. 關於區塊排版 (雙欄格線) */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* 左側文字欄位稍寬，右側數據欄位稍窄 */
+  gap: 3rem;                          /* 左右兩欄的間距 */
+  align-items: center;                /* 垂直置中對齊 */
+}
+
+.about-text p {
+  color: #b3b3b3;
+  font-size: 1.05rem;
+  line-height: 1.8;                   /* 行高拉大一點，段落閱讀起來更舒適 */
+  margin-bottom: 1.5rem;
+}
+
+/* 右側亮點小卡清單 */
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.highlight-item {
+  background-color: #1a1a1a;
+  border-left: 3px solid #d4af37;     /* 左側加上經典復古金的細邊框 */
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 8px 8px 0;         /* 右側圓角 */
+}
+
+.highlight-item .number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.highlight-item .label {
+  font-size: 0.85rem;
+  color: #a3a3a3;
+}
+
+/* 響應式微調 (RWD)：當螢幕變小（例如手機或平板直向）時，雙欄自動變成單欄上下堆疊 */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* 3. 成員介紹區塊樣式 */
+.section-desc {
+  color: #a3a3a3;
+  font-size: 1.05rem;
+  margin-top: -1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.member-card {
+  background-color: #181818;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 2.2rem;
+  position: relative;             /* 讓內部的絕對定位徽章有所依據 */
+  overflow: hidden;               /* 隱藏超出邊界的元素 */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 滑鼠懸停時的精緻互動：卡片浮起、金邊亮起、產生微光陰影 */
+.member-card:hover {
+  transform: translateY(-6px);
+  border-color: #d4af37;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.08);
+}
+
+/* 成員精緻徽章 */
+.member-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.1); /* 半透明的金色背景底色 */
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;       /* 圓角藥丸造型 */
+  margin-bottom: 1.2rem;
+}
+
+.member-card h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.member-role {
+  color: #e5c558;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+.member-bio {
+  color: #b3b3b3;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* 5. 經典專輯區樣式 */
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.album-card {
+  background-color: #151515;
+  border: 1px solid #282828;
+  border-radius: 12px;
+  padding: 2.2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+.album-year {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #d4af37;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.8rem;
+}
+
+.album-card h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.album-card p {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* 6. 頁尾樣式 */
+.footer {
+  text-align: center;
+  padding: 3rem 5%;
+  color: #737373;
+  font-size: 0.85rem;
+  border-top: 1px solid #222222;
+}
