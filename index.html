@@ -1,160 +1,220 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Beatles | 披頭四傳奇檔案館</title>
-  <link rel="stylesheet" href="styles.css">
+<!DOCTYPE html> <!--宣告這是一份現代的 HTML5 網頁文件-->
+<himl lang="zh-Hant"> <!--語言設定為繁體中文-->
+<haed>
+  <meta charset="UTF-8"> <!--萬國碼編碼宣告-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--手機與響應式-->
+  <title>The Beatles | 披頭四檔案館</title>
+  <link rel="stylesheet" href="styles.css"> <!--讀取CSS-->
+  <link rel="stylesheet" href="text.css">
 </head>
+
 <body>
 
-  <!-- 1. 頂部導覽列 -->
-  <header class="navbar">
-    <div class="logo">THE BEATLES</div>
-    <nav>
+  <!--1.頂部導覽列-->
+  <header class="navbar"> <!--class=定義，方便css設定-->
+    <div class="logo">THE BEATLES</div> <!--div=Division分割/區塊-->
+    <nav> <!--a href=跳轉位置-->
+      <a href="#home">HOME</a>
       <a href="#about">ABOUT</a>
-      <a href="#members">MEMBERS</a>
-      <a href="#albums">ALBUMS</a>
+      <a href="#member">MEMBERS</a>
+      <a href="#album">ALBUMS</a>
     </nav>
   </header>
 
-  <!-- 2. 主視覺首屏 (Hero Section) -->
-  <section class="hero">
+  <!--2.主視覺首頁-->
+  <section id="home" class="hero"> 
     <div class="hero-content">
-      <span class="subtitle">LIVERPOOL, 1960 – 1970</span>
-      <h1>改變現代音樂史的搖滾傳奇</h1>
-      <p>從利物浦的洞穴俱樂部出發，用旋律、實驗精神與文化影響力定義了一個時代。</p>
-      <a href="#members" class="btn">認識更多</a>
+      <span class="small-title">LIVERPOOL, 1960 – 1970</span>
+      <h1>改變現代音樂史的搖滾傳奇</h1> <!--h1=最大層級文字-->
+      <p>從利物浦的洞穴俱樂部出發，用旋律、實驗精神與文化影響力定義了一個時代。</p> <!--P=Paragraph內文-->
+      <a href="#about" class="btn">認識更多</a> <!--btn=按鈕樣式-->
     </div>
   </section>
 
-  <!-- 4. 樂團簡介區 (About Section) -->
-  <section id="about" class="section about-section">
+  <!--3.介紹欄-->
+  <section id="about" class="section-about">
     <div class="section-header">
-      <span class="subtitle">THE LEGACY</span>
+      <span class="subtitle">THE LEGACY</span> <!--span=局部包覆一小段文字-->
       <h2>改變世界的搖滾詩篇</h2>
     </div>
     
     <!-- 左右雙欄網格容器 -->
     <div class="about-grid">
-      
-      <!-- 左側：文字敘述 -->
+
+      <!--左側文字-->
       <div class="about-text">
-        <p>1960年在英國利物浦成軍，由約翰·藍儂、保羅·麥卡尼、喬治·哈里森與林哥·史達組成。披頭四不僅是流行音樂史上銷量最高、影響力最深遠的樂團，更徹底改變了唱片製作、流行文化的樣貌與青年世代的精神風貌。</p>
+        <p>1960年在英國利物浦成軍，由約翰·藍儂、保羅·麥卡尼、喬治·哈里森與林哥·史達組成。披頭四不僅是流行音樂史上銷量最高、影響力最深遠的樂團，更徹底改變了唱片製作、流行文化的樣貌與青年世代的精神風貌</p>
         <p>從早期的「Beatlemania」狂熱旋風，到後期深入社會議題與錄音室聲音實驗的曠世巨作《Sgt. Pepper's Lonely Hearts Club Band》，他們在短短十年內創造了無數不可超越的音樂里程碑。</p>
       </div>
-      
-      <!-- 右側：關鍵亮點小卡 -->
-      <div class="about-highlights">
-        <div class="highlight-item">
-          <span class="number">1960</span>
-          <span class="label">於英國利物浦與漢堡組團出道</span>
-        </div>
-        <div class="highlight-item">
-          <span class="number">10</span>
-          <span class="label">活躍年間發行 13 張傳世錄音室專輯</span>
-        </div>
-        <div class="highlight-item">
-          <span class="number">#1</span>
-          <span class="label">定義現代流行音樂與搖滾史的標竿</span>
-        </div>
-      </div>
 
+      <!--亮點小卡-->
+      <div class="about-hightlight">
+
+        <!--組合時間-->
+        <div class="about-hightlight-item">
+          <span class="about-highlight-title">1960</span>
+          <span class="about-highlight-text">於英國利物浦與德國漢堡組團出道</span>
+        </div>
+
+        <!--活動時間-->
+        <div class="about-hightlight-item">
+          <span class="about-highlight-title">10</span>
+          <span class="about-highlight-text">活躍的十年發行12張錄音室專輯及無數爆紅單曲</span>
+        </div>
+
+        <!--瞎吹-->
+        <div class="about-hightlight-item">
+          <span class="about-highlight-title">#1</span>
+          <span class="about-highlight-text">定義現代流行音樂與搖滾史的標竿</span>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- 3. 四位成員深度介紹區 (Members Section) -->
-  <section id="members" class="section members-section">
+  <!--4.成員欄-->
+  <section id="member" class="section-member">
+
+    <!--成員欄標題-->
     <div class="section-header">
       <span class="subtitle">THE FAB FOUR</span>
       <h2>四位傳奇成員</h2>
-      <p class="section-desc">正是這四個性格迥異卻天賦異稟的靈魂，碰撞出了改變時代的化學反應。</p>
     </div>
-
-    <!-- 成員卡片網格容器 -->
-    <div class="members-grid">
+    
+    <!--成員字卡包-->
+    <div class="member-grid">
       
-      <!-- 成員 1：John Lennon -->
-      <article class="member-card">
-        <div class="member-badge">創始核心</div>
-        <h3>John Lennon</h3>
-        <p class="member-role">主唱 / 節奏吉他 / 詞曲創作</p>
-        <p class="member-bio">樂團的精神引領者，以犀利直率的詩意歌詞、不羈的反叛精神與前衛實驗風格聞名，為後世搖滾樂注入了強烈的社會意識與人文關懷。</p>
-      </article>
+      <!--成員一號John Lennon-->
+      <a href="john-personal-page.html" class="member-card-link">
+        <artical class="member-card">
+          <div class="member-badge">創始核心</div>
+          <h3>約翰藍儂 John Lennon</h3>
+          <p class="member-role"> 主唱 / 節奏吉他 / 詞曲創作</p>
+          <p class="member-text"> 披頭四的「精神」，樂團的創始核心，以犀利直率的詩意歌詞、不羈的反叛精神與前衛實驗風格聞名，為後世搖滾樂注入了強烈的社會意識與人文關懷</p>
+        </artical>
+      </a>
 
-      <!-- 成員 2：Paul McCartney -->
-      <article class="member-card">
-        <div class="member-badge">旋律天才</div>
-        <h3>Paul McCartney</h3>
-        <p class="member-role">主唱 / 貝斯 / 鋼琴</p>
-        <p class="member-bio">擁有無與倫比的旋律直覺與全方位樂器才華，創作了無數跨越時代的金曲，將流行樂的精緻度與音樂性推向歷史新高度。</p>
-      </article>
+      <!--成員二號Paul McCartney-->
+      <a href="paul-personal-page.html" class="member-card-link">
+        <artical class="member-card">
+          <div class="member-badge">旋律天才</div>
+          <h3>保羅麥卡尼 Paul McCartney</h3>
+          <p class="member-role"> 主唱 / 貝斯 / 詞曲創作</p>
+          <p class="member-text"> 披頭四的「大腦」擁有無與倫比的旋律直覺與全方位樂器才華，創作了無數跨越時代的金曲，將流行樂的精緻度與音樂性推向歷史新高度。</p>
+        </artical>
+      </a>      
 
-      <!-- 成員 3：George Harrison -->
-      <article class="member-card">
-        <div class="member-badge">靈性吉他手</div>
-        <h3>George Harrison</h3>
-        <p class="member-role">主奏吉他 / 西塔琴 / 和聲</p>
-        <p class="member-bio">被尊稱為「安靜的披頭」，將東方印度音樂與哲學思維引入西方搖滾，其吉他編曲細膩且充滿內省的靈性美感。</p>
-      </article>
+      <!--成員三號George Harrison-->
+      <a href="george-personal-page.html" class="member-card-link">
+        <artical class="member-card">
+          <div class="member-badge">靈性吉他手</div>
+          <h3>喬治哈里森 George Harrisoy</h3>
+          <p class="member-role"> 主唱 / 主音吉他 / 詞曲創作</p>
+          <p class="member-text"> 披頭四的「靈魂」，將東方印度音樂與哲學思維引入西方搖滾，其吉他編曲細膩且充滿內省的靈性美感。</p>
+        </artical>
+      </a> 
 
-      <!-- 成員 4：Ringo Starr -->
-      <article class="member-card">
-        <div class="member-badge">節奏靈魂</div>
-        <h3>Ringo Starr</h3>
-        <p class="member-role">鼓手 / 打擊樂 / 偶任主唱</p>
-        <p class="member-bio">以獨特精準的左撇子打法與隨性搖擺的律動感，穩固了樂團龐大編曲底盤，其幽默風趣的個人特質也是團隊不可或缺的潤滑劑。</p>
-      </article>
+      <!--成員四號Ringo Starr-->
+      <a href="ringo-personal-page.html" class="member-card-link">
+        <artical class="member-card">
+          <div class="member-badge">節奏靈魂</div>
+          <h3>林戈史達 Ringo Starr</h3>
+          <p class="member-role"> 鼓手 / 打擊樂 / 偶任主唱</p>
+          <p class="member-text"> 以獨特精準的左撇子打法與隨性搖擺的律動感，穩固了樂團龐大編曲底盤，其幽默風趣的個人特質也是團隊不可或缺的潤滑劑。</p>
+        </artical>
+      </a>  
 
     </div>
   </section>
 
-  <!-- 5. 經典專輯區 (Albums Section) -->
-  <section id="albums" class="section albums-section">
+  <!--5.專輯欄-->
+  <section id="album" class="section-album">
+
+    <!--專輯欄標題-->
     <div class="section-header">
       <span class="subtitle">MASTERPIECES</span>
       <h2>傳世經典專輯</h2>
-      <p class="section-desc">定義了搖滾樂黃金年代、至今仍影響無數音樂人的四大代表作。</p>
+      <p>定義了搖滾樂黃金年代、至今仍影響無數音樂人的四大代表作。</p>
     </div>
+    
+    
+  <div class="beatles-albums-grid">
 
-    <!-- 專輯卡片網格 -->
-    <div class="albums-grid">
-      
-      <!-- 專輯 1 -->
-      <div class="album-card">
-        <div class="album-year">1965</div>
-        <h3>Rubber Soul</h3>
-        <p>展現成熟民謠搖滾轉型的轉折之作，歌詞與編曲更具文學深度與內省氣質。</p>
+    <!-- 第 1 張：Revolver -->
+    <article class="beatles-album-card">
+      <div class="beatles-album-inner">
+        <div class="beatles-album-face beatles-album-front">
+          <img src="images/album/Revolver_album_cover.jpg" alt="Revolver 專輯封面">
+        </div>
+        <div class="beatles-album-face beatles-album-back">
+          <span class="beatles-album-year">1966</span>
+          <h3>Revolver</h3>
+          <p>褪去早期流行搖滾的青澀，大膽運用錄音技術、印度音樂與迷幻元素，將搖滾樂帶入嶄新的實驗領域，展現披頭四最具創造力與探索精神的一面。</p>
+        </div>
       </div>
-
-      <!-- 專輯 2 -->
-      <div class="album-card">
-        <div class="album-year">1966</div>
-        <h3>Revolver</h3>
-        <p>實驗精神的巔峰，大膽融合錄音室特效、古典弦樂與迷幻搖滾色彩。</p>
+    </article>
+    
+    <!-- 第 2 張：Sgt. Pepper's Lonely Hearts Club Band -->
+    <article class="beatles-album-card">
+      <div class="beatles-album-inner">
+        <div class="beatles-album-face beatles-album-front">
+          <img src="images/album/Sgt._Pepper_album_cover.jpg" alt="Sgt. Pepper's Lonely Hearts Club Band 專輯封面">
+        </div>
+        <div class="beatles-album-face beatles-album-back">
+          <span class="beatles-album-year">1967</span>
+          <h3>Sgt. Pepper's Lonely Hearts Club Band</h3>
+          <p>史上第一張概念專輯，以虛構樂團為概念，融合迷幻搖滾、管弦樂與實驗音效，打破傳統流行專輯的框架，將音樂塑造成一場充滿想像力的藝術演出。</p>
+        </div>
       </div>
+    </article>
 
-      <!-- 專輯 3 -->
-      <div class="album-card">
-        <div class="album-year">1967</div>
-        <h3>Sgt. Pepper's Lonely Hearts Club Band</h3>
-        <p>概念專輯的開山鼻祖，被公認為流行音樂史上最具藝術開創性的偉大巨作。</p>
+    <!-- 第 3 張：The Beatles (White Album) -->
+    <article class="beatles-album-card">
+      <div class="beatles-album-inner">
+        <div class="beatles-album-face beatles-album-front">
+          <img src="images/album/White_album_cover.jpg" alt="The Beatles 專輯封面">
+        </div>
+        <div class="beatles-album-face beatles-album-back">
+          <span class="beatles-album-year">1968</span>
+          <h3>The Beatles (The White Album)</h3>
+          <p>褪去迷幻時期的華麗包裝，以極簡的封面呈現豐富而多元的音樂內容。從搖滾、民謠、藍調到實驗音樂，四位成員各自展現鮮明的創作個性，形成一張風格迥異卻充滿生命力的作品。</p>
+        </div>
       </div>
+    </article>
 
-      <!-- 專輯 4 -->
-      <div class="album-card">
-        <div class="album-year">1969</div>
-        <h3>Abbey Road</h3>
-        <p>擁有傳奇斑馬線封面的告別之作，B面無縫接合的華麗組曲堪稱編曲教科書。</p>
+    <!-- 第 4 張：Abbey Road -->
+    <article class="beatles-album-card">
+      <div class="beatles-album-inner">
+        <!-- 正面：專輯封面 -->
+        <div class="beatles-album-face beatles-album-front">
+          <img src="images/album/Abbey_Road_album_cover.jpg" alt="Abbey Road 專輯封面">
+        </div>
+        <!-- 背面：專輯簡短資料 -->
+        <div class="beatles-album-face beatles-album-back">
+          <span class="beatles-album-year">1969</span>
+          <h3>Abbey Road</h3>
+          <p>以精緻的編曲、豐富的音樂層次與標誌性的組曲收尾，將四位成員的創作才華凝聚成成熟而優雅的作品，也成為披頭四最後錄製的錄音室專輯。</p>
+        </div>
       </div>
+    </article>
 
-    </div>
+  </div>
+  <a herf="album_page.html" class="btn">認識更多專輯</a>
+
   </section>
 
-  <!-- 6. 頁尾 (Footer) -->
-  <footer class="footer">
-    <p>&copy; 2026 The Beatles Fan Archives. Crafted with HTML & CSS.</p>
+  <!--免責聲明-->
+  <footer class="site-footer" aria-label="頁尾與免責聲明">
+    <div class="site-footer-inner">
+      <p class="disclaimer">
+        <strong>免責聲明：</strong>本網站為個人學習與音樂文化整理之非官方 fan site，與 The Beatles、Apple Corps Ltd. 及相關唱片公司無任何官方隸屬或授權關係；文中提及之專輯名稱、封面影像與相關資料僅供介紹與參考使用，版權皆歸原權利人所有。
+      </p>
+    </div>
   </footer>
 
 </body>
-</html>
+
+        
+
+
+
